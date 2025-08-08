@@ -7,7 +7,9 @@
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "deploy": "./deploy.sh",
+    "deploy:manual": "npm run build && echo 'Build complete! Upload the dist/ folder to Netlify'"
   },
   "keywords": [],
   "author": "",

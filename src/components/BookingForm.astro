@@ -149,7 +149,7 @@
     // Set minimum date to today
     if (dateInput) {
       const today = new Date().toISOString().split('T')[0];
-      dateInput.min = today;
+      (dateInput as HTMLInputElement).min = today;
     }
     
     if (form) {
@@ -161,7 +161,8 @@
         let isValid = true;
         
         requiredFields.forEach(field => {
-          if (!field.value.trim()) {
+          const inputField = field as HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement;
+          if (!inputField.value.trim()) {
             field.classList.add('border-red-500');
             isValid = false;
           } else {
@@ -175,19 +176,21 @@
         }
         
         // Simulate form submission
-        const submitButton = form.querySelector('button[type="submit"]');
-        const originalText = submitButton.innerHTML;
-        
-        submitButton.innerHTML = '<svg class="w-5 h-5 animate-spin" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"/></svg> Booking...';
-        submitButton.disabled = true;
-        
-        // Simulate API call
-        setTimeout(() => {
-          alert('Thank you! Your appointment request has been submitted. We will contact you shortly to confirm your appointment.');
-          form.reset();
-          submitButton.innerHTML = originalText;
-          submitButton.disabled = false;
-        }, 2000);
+        const submitButton = form.querySelector('button[type="submit"]') as HTMLButtonElement;
+        if (submitButton) {
+          const originalText = submitButton.innerHTML;
+          
+          submitButton.innerHTML = '<svg class="w-5 h-5 animate-spin" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"/></svg> Booking...';
+          submitButton.disabled = true;
+          
+          // Simulate API call
+          setTimeout(() => {
+            alert('Thank you! Your appointment request has been submitted. We will contact you shortly to confirm your appointment.');
+            (form as HTMLFormElement).reset();
+            submitButton.innerHTML = originalText;
+            submitButton.disabled = false;
+          }, 2000);
+        }
       });
     }
   });

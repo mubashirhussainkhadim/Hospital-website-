@@ -5,7 +5,7 @@
     "title": "CEO",
     "specialization": "General Surgery",
     "experience": "15+ years",
-    "image": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400&h=400&fit=crop&crop=face"
+    "image": "https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=400&h=400&fit=crop&crop=face"
   },
   {
     "id": "dr-ayesha-khan",
@@ -21,7 +21,7 @@
     "title": "Gynecology Specialist",
     "specialization": "Women's Health",
     "experience": "8+ years",
-    "image": "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400&h=400&fit=crop&crop=face"
+    "image": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400&h=400&fit=crop&crop=face"
   },
   {
     "id": "dr-bilal-ahmed",
@@ -29,7 +29,7 @@
     "title": "General Surgeon",
     "specialization": "Laparoscopic Surgery",
     "experience": "10+ years",
-    "image": "https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=400&h=400&fit=crop&crop=face"
+    "image": "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400&h=400&fit=crop&crop=face"
   },
   {
     "id": "dr-adeel",
@@ -37,6 +37,6 @@
     "title": "General Surgeon",
     "specialization": "Emergency Surgery",
     "experience": "7+ years",
-    "image": "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400&h=400&fit=crop&crop=face"
+    "image": "https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?w=400&h=400&fit=crop&crop=face"
   }
 ]

@@ -1,0 +1,197 @@
+---
+import Layout from '../components/Layout.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import servicesData from '../data/services.json';
+---
+
+<Layout title="Our Services - Khadim Hospital" description="Comprehensive medical services including gynecology, general surgery, emergency care, and more at Khadim Hospital.">
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-br from-primary-600 to-primary-800 text-white py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold mb-6">Our Medical Services</h1>
+      <p class="text-xl text-blue-100 max-w-3xl mx-auto">
+        Comprehensive healthcare services provided by experienced medical professionals using state-of-the-art technology and equipment.
+      </p>
+    </div>
+  </section>
+
+  <!-- Services Grid -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {servicesData.map((service) => (
+          <ServiceCard 
+            title={service.title}
+            description={service.description}
+            icon={service.icon}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Detailed Services -->
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="space-y-16">
+        <!-- Gynecology -->
+        <div id="gynecology" class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Gynecology & Women's Health</h2>
+            <p class="text-gray-600 mb-6 leading-relaxed">
+              Our gynecology department provides comprehensive women's healthcare services, from routine check-ups to complex surgical procedures. We specialize in prenatal care, infertility treatments, and minimally invasive gynecological surgeries.
+            </p>
+            <ul class="space-y-3 mb-8">
+              <li class="flex items-center text-gray-600">
+                <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+                Prenatal and postnatal care
+              </li>
+              <li class="flex items-center text-gray-600">
+                <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+                Infertility diagnosis and treatment
+              </li>
+              <li class="flex items-center text-gray-600">
+                <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+                Minimally invasive gynecological surgery
+              </li>
+              <li class="flex items-center text-gray-600">
+                <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+                Family planning consultation
+              </li>
+            </ul>
+            <a href="/book" class="btn-primary">Book Gynecology Consultation</a>
+          </div>
+          <div class="bg-gradient-to-br from-pink-50 to-purple-50 rounded-2xl p-8">
+            <svg class="w-full h-64" viewBox="0 0 300 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="150" cy="100" r="80" fill="#fce7f3" opacity="0.5"/>
+              <circle cx="150" cy="100" r="60" fill="#f9a8d4" opacity="0.7"/>
+              <circle cx="150" cy="100" r="40" fill="#ec4899" opacity="0.9"/>
+              <path d="M120 100 L140 120 L180 80" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- General Surgery -->
+        <div id="surgery" class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div class="order-2 lg:order-1 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8">
+            <svg class="w-full h-64" viewBox="0 0 300 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="100" y="60" width="100" height="80" fill="#dbeafe" rx="8"/>
+              <rect x="110" y="70" width="80" height="60" fill="#3b82f6" opacity="0.7" rx="4"/>
+              <circle cx="150" cy="100" r="15" fill="white"/>
+              <path d="M145 100 L155 100 M150 95 L150 105" stroke="#3b82f6" stroke-width="2"/>
+            </svg>
+          </div>
+          <div class="order-1 lg:order-2">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">General Surgery</h2>
+            <p class="text-gray-600 mb-6 leading-relaxed">
+              Our skilled general surgeons perform a wide range of surgical procedures with precision and care. We utilize advanced laparoscopic techniques for faster recovery and minimal scarring.
+            </p>
+            <ul class="space-y-3 mb-8">
+              <li class="flex items-center text-gray-600">
+                <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+                Laparoscopic surgery
+              </li>
+              <li class="flex items-center text-gray-600">
+                <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+                Emergency surgical procedures
+              </li>
+              <li class="flex items-center text-gray-600">
+                <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+                Abdominal and hernia repair
+              </li>
+              <li class="flex items-center text-gray-600">
+                <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+                Post-operative care
+              </li>
+            </ul>
+            <a href="/book" class="btn-primary">Schedule Surgery Consultation</a>
+          </div>
+        </div>
+
+        <!-- Emergency Care -->
+        <div id="emergency" class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">24/7 Emergency Care</h2>
+            <p class="text-gray-600 mb-6 leading-relaxed">
+              Our emergency department is equipped to handle urgent medical situations around the clock. With experienced emergency physicians and advanced life support equipment, we provide immediate care when you need it most.
+            </p>
+            <ul class="space-y-3 mb-8">
+              <li class="flex items-center text-gray-600">
+                <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+                24/7 emergency services
+              </li>
+              <li class="flex items-center text-gray-600">
+                <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+                Advanced life support
+              </li>
+              <li class="flex items-center text-gray-600">
+                <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+                Emergency surgery capability
+              </li>
+              <li class="flex items-center text-gray-600">
+                <svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+                Trauma care
+              </li>
+            </ul>
+            <a href="tel:03084876102" class="btn-primary bg-red-600 hover:bg-red-700">
+              Emergency: 0308 4876102
+            </a>
+          </div>
+          <div class="bg-gradient-to-br from-red-50 to-orange-50 rounded-2xl p-8">
+            <svg class="w-full h-64" viewBox="0 0 300 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="150" cy="100" r="60" fill="#fee2e2"/>
+              <rect x="140" y="70" width="20" height="60" fill="#ef4444" rx="2"/>
+              <rect x="120" y="90" width="60" height="20" fill="#ef4444" rx="2"/>
+              <circle cx="90" cy="60" r="8" fill="#fbbf24"/>
+              <circle cx="210" cy="140" r="8" fill="#fbbf24"/>
+              <circle cx="80" cy="140" r="6" fill="#34d399"/>
+              <circle cx="220" cy="60" r="6" fill="#34d399"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="bg-primary-600 py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl font-bold text-white mb-4">Need Medical Assistance?</h2>
+      <p class="text-blue-100 mb-8 max-w-2xl mx-auto">
+        Our medical team is ready to provide you with the care you need. Book an appointment or contact us for emergency services.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/book" class="btn-secondary">
+          Book Appointment
+        </a>
+        <a href="/contact" class="btn-outline border-white text-white hover:bg-white hover:text-primary-600">
+          Contact Us
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

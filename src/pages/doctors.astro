@@ -1,0 +1,208 @@
+---
+import Layout from '../components/Layout.astro';
+import DoctorCard from '../components/DoctorCard.astro';
+import doctorsData from '../data/doctors.json';
+---
+
+<Layout title="Our Doctors - Khadim Hospital" description="Meet our experienced medical professionals specialized in gynecology, general surgery, and emergency care at Khadim Hospital.">
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-br from-primary-600 to-primary-800 text-white py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold mb-6">Our Expert Medical Team</h1>
+      <p class="text-xl text-blue-100 max-w-3xl mx-auto">
+        Meet our experienced doctors who are dedicated to providing exceptional healthcare services with compassion and expertise.
+      </p>
+    </div>
+  </section>
+
+  <!-- Doctors Grid -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {doctorsData.map((doctor) => (
+          <DoctorCard 
+            name={doctor.name}
+            title={doctor.title}
+            specialization={doctor.specialization}
+            experience={doctor.experience}
+            image={doctor.image}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Department Leaders -->
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">Department Leadership</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">
+          Our department heads bring decades of experience and leadership to ensure the highest quality of care.
+        </p>
+      </div>
+
+      <div class="space-y-16">
+        <!-- Dr. Hafiz Qasim Profile -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div class="order-2 lg:order-1">
+            <h3 class="text-2xl font-bold text-gray-900 mb-2">Dr. Hafiz Qasim</h3>
+            <p class="text-primary-600 font-semibold mb-4">Chief Executive Officer & Lead Surgeon</p>
+            <p class="text-gray-600 mb-6 leading-relaxed">
+              Dr. Hafiz Qasim is the visionary leader behind Khadim Hospital's success. With over 15 years of experience in general surgery and hospital management, he has established the hospital as a center of excellence in healthcare delivery. His commitment to patient care and clinical excellence has earned him recognition throughout the region.
+            </p>
+            <div class="space-y-3">
+              <div class="flex items-center text-gray-600">
+                <svg class="w-5 h-5 text-primary-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+                MBBS, FCPS (General Surgery)
+              </div>
+              <div class="flex items-center text-gray-600">
+                <svg class="w-5 h-5 text-primary-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+                15+ years of surgical experience
+              </div>
+              <div class="flex items-center text-gray-600">
+                <svg class="w-5 h-5 text-primary-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+                Specialist in Laparoscopic Surgery
+              </div>
+            </div>
+            <div class="mt-6">
+              <a href="/book" class="btn-primary">Book Consultation</a>
+            </div>
+          </div>
+          <div class="order-1 lg:order-2">
+            <div class="bg-gradient-to-br from-primary-50 to-secondary-50 rounded-2xl p-8">
+              <img 
+                src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400&h=400&fit=crop&crop=face" 
+                alt="Dr. Hafiz Qasim"
+                class="w-full h-80 object-cover rounded-xl shadow-lg"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Gynecology Department -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div class="bg-gradient-to-br from-pink-50 to-purple-50 rounded-2xl p-8">
+            <div class="grid grid-cols-1 gap-4">
+              <img 
+                src="https://images.unsplash.com/photo-1594824475562-834b925b3a8f?w=200&h=200&fit=crop&crop=face" 
+                alt="Dr. Ayesha Khan"
+                class="w-32 h-32 object-cover rounded-full mx-auto shadow-lg"
+              />
+              <img 
+                src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=200&h=200&fit=crop&crop=face" 
+                alt="Dr. Naba Sidra"
+                class="w-32 h-32 object-cover rounded-full mx-auto shadow-lg"
+              />
+            </div>
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Gynecology Department</h3>
+            <p class="text-gray-600 mb-6 leading-relaxed">
+              Our gynecology department is led by experienced specialists who provide comprehensive women's healthcare services. From routine check-ups to complex surgical procedures, our team ensures personalized care for every patient.
+            </p>
+            <div class="space-y-4">
+              <div class="border-l-4 border-primary-500 pl-4">
+                <h4 class="font-semibold text-gray-900">Dr. Ayesha Khan</h4>
+                <p class="text-gray-600">Senior Gynecologist with 12+ years experience in women's health and prenatal care.</p>
+              </div>
+              <div class="border-l-4 border-secondary-500 pl-4">
+                <h4 class="font-semibold text-gray-900">Dr. Naba Sidra</h4>
+                <p class="text-gray-600">Gynecology Specialist focusing on minimally invasive procedures and family planning.</p>
+              </div>
+            </div>
+            <div class="mt-6">
+              <a href="/book" class="btn-primary">Book Gynecology Consultation</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Specializations -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">Medical Specializations</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">
+          Our doctors specialize in various fields to provide comprehensive healthcare services.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Gynecology -->
+        <div class="bg-white rounded-xl shadow-lg p-6">
+          <div class="w-12 h-12 bg-pink-100 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-pink-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold text-gray-900 mb-3">Gynecology & Obstetrics</h3>
+          <ul class="text-gray-600 space-y-2 text-sm">
+            <li>• Prenatal and postnatal care</li>
+            <li>• Infertility treatments</li>
+            <li>• Gynecological surgeries</li>
+            <li>• Family planning</li>
+          </ul>
+        </div>
+
+        <!-- General Surgery -->
+        <div class="bg-white rounded-xl shadow-lg p-6">
+          <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1m4 0h1m-6-4h.01M15 6h.01M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2z"/>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold text-gray-900 mb-3">General Surgery</h3>
+          <ul class="text-gray-600 space-y-2 text-sm">
+            <li>• Laparoscopic procedures</li>
+            <li>• Abdominal surgeries</li>
+            <li>• Hernia repairs</li>
+            <li>• Emergency surgeries</li>
+          </ul>
+        </div>
+
+        <!-- Emergency Medicine -->
+        <div class="bg-white rounded-xl shadow-lg p-6">
+          <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold text-gray-900 mb-3">Emergency Medicine</h3>
+          <ul class="text-gray-600 space-y-2 text-sm">
+            <li>• 24/7 emergency care</li>
+            <li>• Trauma management</li>
+            <li>• Critical care</li>
+            <li>• Emergency procedures</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="bg-primary-600 py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl font-bold text-white mb-4">Consult with Our Expert Doctors</h2>
+      <p class="text-blue-100 mb-8 max-w-2xl mx-auto">
+        Schedule an appointment with our experienced medical professionals for personalized healthcare services.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/book" class="btn-secondary">
+          Book Appointment
+        </a>
+        <a href="/services" class="btn-outline border-white text-white hover:bg-white hover:text-primary-600">
+          View Our Services
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,42 @@
+[
+  {
+    "id": "dr-hafiz-qasim",
+    "name": "Dr. Hafiz Qasim",
+    "title": "CEO",
+    "specialization": "General Surgery",
+    "experience": "15+ years",
+    "image": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400&h=400&fit=crop&crop=face"
+  },
+  {
+    "id": "dr-ayesha-khan",
+    "name": "Dr. Ayesha Khan",
+    "title": "Senior Gynecologist",
+    "specialization": "Gynecology & Obstetrics",
+    "experience": "12+ years",
+    "image": "https://images.unsplash.com/photo-1594824475562-834b925b3a8f?w=400&h=400&fit=crop&crop=face"
+  },
+  {
+    "id": "dr-naba-sidra",
+    "name": "Dr. Naba Sidra",
+    "title": "Gynecology Specialist",
+    "specialization": "Women's Health",
+    "experience": "8+ years",
+    "image": "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400&h=400&fit=crop&crop=face"
+  },
+  {
+    "id": "dr-bilal-ahmed",
+    "name": "Dr. Bilal Ahmed",
+    "title": "General Surgeon",
+    "specialization": "Laparoscopic Surgery",
+    "experience": "10+ years",
+    "image": "https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=400&h=400&fit=crop&crop=face"
+  },
+  {
+    "id": "dr-adeel",
+    "name": "Dr. Adeel",
+    "title": "General Surgeon",
+    "specialization": "Emergency Surgery",
+    "experience": "7+ years",
+    "image": "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400&h=400&fit=crop&crop=face"
+  }
+]

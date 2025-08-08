@@ -1,0 +1,38 @@
+[
+  {
+    "id": "gynecology",
+    "title": "Gynecology Care",
+    "description": "Expert care for women's health, including prenatal care, infertility treatments, and minimally invasive gynecological surgeries.",
+    "icon": "heart"
+  },
+  {
+    "id": "emergency",
+    "title": "24/7 Emergency",
+    "description": "Round-the-clock emergency services for urgent surgical and gynecological needs.",
+    "icon": "clock"
+  },
+  {
+    "id": "surgery",
+    "title": "Expert Surgeons",
+    "description": "Skilled general surgeons performing advanced procedures with precision and care.",
+    "icon": "user-check"
+  },
+  {
+    "id": "pharmacy",
+    "title": "Pharmacy",
+    "description": "On-site pharmacy providing medications for gynecological and surgical treatments.",
+    "icon": "pill"
+  },
+  {
+    "id": "advanced-surgery",
+    "title": "Advanced Surgery",
+    "description": "State-of-the-art facilities for laparoscopic and general surgeries with faster recovery.",
+    "icon": "scissors"
+  },
+  {
+    "id": "patient-care",
+    "title": "Patient-Centered Care",
+    "description": "Compassionate and personalized care for every patient at Khadim Hospital.",
+    "icon": "users"
+  }
+]
